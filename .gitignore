@@ -1,0 +1,35 @@
+# Ignora ambientes virtuais
+.venv/
+venv/
+ENV/
+env/
+
+# Arquivos de dependências locais e temporários
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Modelos treinados
+*.h5
+*.hdf5
+*.ckpt
+*.tflite
+
+# Arquivos de teste temporários
+*.tmp
+*.bak
+*.swp
+
+# Arquivos Jupyter
+.ipynb_checkpoints/
+
+# Dados sensíveis
+.env
+*.secret

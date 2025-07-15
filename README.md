@@ -37,7 +37,7 @@ Treinar uma rede LSTM com base em séries temporais para prever valores futuros.
 
 ## 🚀 API com FastAPI
 
-A API lê o modelo treinado e oferece um endpoint para previsão baseado em três valores anteriores.
+A API lê o modelo treinado e oferece um endpoint para previsão
 
 ### Endpoint
 - `POST /prever`
@@ -103,10 +103,21 @@ Configurado automaticamente via Google Cloud Console:
 ## ✅ Teste via CURL
 
 ```bash
-curl -X POST https://modelo-lstm-api-304859573791.us-central1.run.app/prever -H "Content-Type: application/json" -d '{"valores": [120.5, 122.0, 121.2]}'
+curl -X POST https://modelo-lstm-api-304859573791.us-central1.run.app/predict/   -H "Content-Type: application/json"   -d '{"prices": [190.1, 191.3, 192.5, 193.2, 194.8, 195.1, 196.4, 197.8, 198.9, 199.3, 200.1, 201.0, 202.4, 203.5, 204.6, 205.1, 206.7, 207.5, 208.1, 209.0, 210.2, 211.5, 212.0, 213.6, 214.7, 215.1, 216.2, 217.0, 218.4, 219.1, 220.3, 221.0, 222.5, 223.1, 224.2, 225.0, 226.3, 227.0, 228.6, 229.4, 230.1, 231.0, 232.2, 233.1, 234.0, 235.5, 236.3, 237.0, 238.4, 239.5, 240.3, 241.0, 242.6, 243.4, 244.1, 245.2, 246.0, 247.1, 248.5, 249.0]}'
 ```
-
 ---
+
+## 🔒 .gcloudignore
+Evitar subir arquivos desnecessários, mantendo os arquivos de treinamento necessário para o projeto na Cloud
+```
+.git
+.gitignore
+__pycache__/
+*.pyc
+.venv/
+.env
+*.secret
+```
 
 ## 🔒 .gitignore
 

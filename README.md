@@ -1,7 +1,4 @@
-###############################
-#### TECH CHALLENGE 4 FIAP ####
-###############################
-
+# TECH CHALLENGE 4 FIAP #
 
 # 📈 Previsão de Preço de Ações com LSTM e FastAPI - 
 

@@ -6,6 +6,7 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import uvicorn
 import joblib
+import os
 
 # Carrega o normalizador salvo
 normalizador: MinMaxScaler = joblib.load("normalizador.gz")
@@ -31,4 +32,6 @@ def prever_proximo_valor(dados: EntradaPrecos):
     return {"proximo_preco_fechamento": float(previsao_final[0, 0])}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    import os
+    porta = int(os.environ.get("PORT", 8080))
+    uvicorn.run("api:app", host="0.0.0.0", port=porta)

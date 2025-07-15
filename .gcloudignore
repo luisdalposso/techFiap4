@@ -1,0 +1,9 @@
+# Use .gcloudignore personalizado
+.gcloudignore
+.git
+.gitignore
+__pycache__/
+*.pyc
+.venv/
+.env
+*.secret

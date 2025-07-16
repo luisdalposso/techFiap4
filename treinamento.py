@@ -12,7 +12,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 # Coleta os dados
 simbolo = 'NFLX'
 data_inicio = '2018-01-01'
-data_fim = '2024-07-20'
+data_fim = '2025-07-01'
 dados_brutos = yf.download(simbolo, start=data_inicio, end=data_fim)
 dados_fechamento = dados_brutos[['Close']]
 
